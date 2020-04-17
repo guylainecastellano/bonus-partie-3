@@ -1,0 +1,73 @@
+header{
+  background-image: url(../image/header.jpg);
+  background-size: cover;
+  height: 370px;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+h1{
+  font-family: 'Playfair display', serif;
+  font-size: 5em;
+}
+ul{
+  display: flex;
+  justify-content: space-around;
+  align-items: center; /*enléve les puces */
+  list-style-type: none; /* définit la hauteur de la liste mm hauteur que nav */
+  height: 50px;
+}
+li > a{
+  color: #000000;
+  font-size: 3em; /* enleve le trait de soulignmt */
+  text-decoration: none;
+}
+li > a:hover{
+  color: #ffffff; /*change de couleur qd on passe dessus */
+}
+nav{
+  background-color: #84b9bd;
+  height: 50px;
+  margin: -20px;
+}
+#iconBurger{
+  display: none; /*affichage menu burger : sans affichage */
+}
+/* titre et texte de présentation */
+#présentation{
+  font-size: 3em;
+  text-align: center;
+  background-color:  #84b9bd;
+  margin: 0 5em 0 5em;
+}
+/* blocs */
+#container{
+  display: flex; /*mis par défaut flex-direction:row (mis côte à côte) */
+  padding: 1.2em;
+}
+img{
+  width: 100%;
+}
+.article{
+  text-align: center;
+  margin: 1.7em;
+}
+.container p{
+  text-align: justify;
+}
+/*media queries */
+@media screen AND (max-width: 992px){ /* version tablette */
+  #container{
+    flex-direction: column;   /*mettre alignement des 3 blocs en vertical*/
+  }
+}
+
+@media screen and (max-width: 480px){ /* version portable (téléphone) */
+  /* disparaitre les éléments de la navbar et faire apparaitre le menu burger */
+  #iconBurger{
+    display: block; /*affichage menu burger : sans affichage */
+  }
+  li a, li form{
+    display: none;
+  }
+}
